@@ -211,3 +211,9 @@ a[href*="wa.me"] {
   display: inline-block !important;
   text-align: left !important;
 }
+
+/* Keep top contact bar left-to-right */
+.contact-strip {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
