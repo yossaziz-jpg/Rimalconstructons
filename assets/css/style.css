@@ -196,3 +196,11 @@ body.en .hf:last-child{border-right:0}
   .services,.compliance-grid,.gallery,.footer-grid{grid-template-columns:1fr}
   .section{padding:60px 0}
 }
+
+/* Fix phone number direction on Arabic pages */
+a[href^="tel:"],
+a[href*="wa.me"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+}
