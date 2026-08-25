@@ -203,4 +203,11 @@ a[href*="wa.me"] {
   direction: ltr !important;
   unicode-bidi: isolate !important;
   display: inline-block;
+}/* Force telephone numbers to stay left-to-right inside Arabic layout */
+[data-primary-phone],
+[data-secondary-phone] {
+  direction: ltr !important;
+  unicode-bidi: bidi-override !important;
+  display: inline-block !important;
+  text-align: left !important;
 }
