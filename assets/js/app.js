@@ -15,8 +15,15 @@ function fillConfig() {
   setText("sloganAr", cfg.company.sloganAr);
   setText("sloganEn", cfg.company.sloganEn);
 
-  document.querySelectorAll("[data-primary-phone]").forEach(el => el.textContent = cfg.contact.phonePrimaryDisplay);
-  document.querySelectorAll("[data-secondary-phone]").forEach(el => el.textContent = cfg.contact.phoneSecondaryDisplay);
+  document.querySelectorAll("[data-primary-phone]").forEach(el => {
+  el.textContent = cfg.contact.phonePrimaryDisplay;
+  el.setAttribute("dir", "ltr");
+});
+
+document.querySelectorAll("[data-secondary-phone]").forEach(el => {
+  el.textContent = cfg.contact.phoneSecondaryDisplay;
+  el.setAttribute("dir", "ltr");
+});
   document.querySelectorAll("[data-email-primary]").forEach(el => el.textContent = cfg.contact.emailPrimary);
   document.querySelectorAll("[data-email-business]").forEach(el => el.textContent = cfg.contact.emailBusiness);
 
