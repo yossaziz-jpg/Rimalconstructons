@@ -7,9 +7,9 @@ window.RIMAL_CONFIG = {
   },
 
   contact: {
-    phonePrimaryDisplay: "00963941 335 624",
+    phonePrimaryDisplay: "+963941 335 624",
     phonePrimaryTel: "+963941335624",
-    whatsappNumber: "+963941335624",
+    whatsappNumber: "963941335624",
     phoneSecondaryDisplay: "+963 992 052 912",
     phoneSecondaryTel: "+963992052912",
     emailPrimary: "info@rimalconstructions.com",
