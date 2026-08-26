@@ -87,3 +87,29 @@ document.querySelectorAll('.gallery-item').forEach(btn=>btn.addEventListener('cl
 document.getElementById('closeLightbox').onclick=()=>lb.classList.remove('open');
 lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+// Cookie consent
+const cookieBanner = document.getElementById("cookieBanner");
+const acceptCookies = document.getElementById("acceptCookies");
+const rejectCookies = document.getElementById("rejectCookies");
+
+const cookieChoice = localStorage.getItem("cookieConsent");
+
+if (cookieBanner) {
+  if (cookieChoice) {
+    cookieBanner.style.display = "none";
+  }
+
+  if (acceptCookies) {
+    acceptCookies.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "accepted");
+      cookieBanner.style.display = "none";
+    });
+  }
+
+  if (rejectCookies) {
+    rejectCookies.addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "rejected");
+      cookieBanner.style.display = "none";
+    });
+  }
+}
