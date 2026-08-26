@@ -217,3 +217,77 @@ a[href*="wa.me"] {
   direction: ltr !important;
   unicode-bidi: isolate !important;
 }
+
+/* Cookie consent banner */
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  background: #ffffff;
+  color: #071522;
+  border: 1px solid #e7e1d8;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  padding: 18px 20px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie-text {
+  max-width: 780px;
+}
+
+.cookie-text strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.cookie-text p {
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cookie-buttons button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#acceptCookies {
+  background: #c8973c;
+  color: #fff;
+}
+
+#rejectCookies {
+  background: #071522;
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+  }
+
+  .cookie-buttons button {
+    flex: 1;
+  }
+}
